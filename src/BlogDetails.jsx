@@ -4,6 +4,7 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import useFetch from "./useFetch";
+import configData from "./config.json";
 
 export default function BlogDetails() {
   const { id } = useParams();
@@ -11,10 +12,10 @@ export default function BlogDetails() {
     data: blog,
     fail,
     pending,
-  } = useFetch(" http://localhost:8000/blogs/" + id);
+  } = useFetch(configData.SERVER_URL + id);
   const history = useHistory();
   const handleClick = () => {
-    fetch(" http://localhost:8000/blogs/" + id, {
+    fetch(configData.SERVER_URL + id, {
       method: "DELETE",
     }).then(() => {
       history.push("/");

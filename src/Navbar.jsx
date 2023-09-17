@@ -8,7 +8,7 @@ export default function Navbar() {
             <h1 className=' text-red-600 font-semibold text-xl'>The React Blog</h1>
             <div className="">
                 <Link className='ml-4 p-2  hover:text-red-600' to="/">Home</Link>
-                <Link className='ml-4 p-2   hover:text-red-600' to="create">New Blog</Link>
+                <Link className='ml-4 p-2   hover:text-red-600' to="/create">New Blog</Link>
             </div>
         </nav>
     </div>

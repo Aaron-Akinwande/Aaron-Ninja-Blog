@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import configData from "./config.json";
 
 export default function Create() {
   const [title, setTitle] = useState("");
@@ -7,6 +8,7 @@ export default function Create() {
   const [author, setAuthor] = useState("Mario");
   const [pend, setPend] = useState(false);
   const history = useHistory();
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +16,7 @@ export default function Create() {
 
     setPend(true);
 
-    fetch("http://localhost:8000/blogs", {
+    fetch(configData.SERVER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newBlog),

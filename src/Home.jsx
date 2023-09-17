@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 import useFetch from "./useFetch";
+import configData from "./config.json";
 
 export default function Home() {
   // const handleDelete = (id) => {
@@ -12,7 +13,7 @@ export default function Home() {
     data: blogs,
     pending,
     fail,
-  } = useFetch("http://localhost:8000/blogs");
+  } = useFetch(configData.SERVER_URL);
 
   return (
     <div>
