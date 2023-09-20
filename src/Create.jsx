@@ -44,7 +44,6 @@ export default function Create() {
         <input
           type="text"
           required
-          // value={body}
           onChange={(e) => setBody(e.target.value)}
           className=" h-20 w-full py-2 px-3 my-3 mx-0 border border-gray-500 rounded"
         />
@@ -74,9 +73,6 @@ export default function Create() {
           </button>
         )}
 
-        {/* <p>{title}</p>
-          <p>{body}</p>
-          <p>{author}</p> */}
       </form>
     </div>
   );
