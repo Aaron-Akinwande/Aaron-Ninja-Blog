@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./App.css";
 
 import React from "react";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Create from "./create";
+import Create from "./Create";
 import BlogDetails from "./BlogDetails";
 import NotFounf from "./NotFounf";
 
