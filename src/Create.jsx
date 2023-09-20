@@ -16,7 +16,7 @@ export default function Create() {
 
     setPend(true);
 
-    fetch(configData.SERVER_URL, {
+    fetch(import.meta.env.VITE_SERVER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newBlog),
