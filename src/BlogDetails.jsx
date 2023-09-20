@@ -12,10 +12,10 @@ export default function BlogDetails() {
     data: blog,
     fail,
     pending,
-  } = useFetch(configData.SERVER_URL + id);
+  } = useFetch(import.meta.env.VITE_SERVER_URL + id);
   const history = useHistory();
   const handleClick = () => {
-    fetch(configData.SERVER_URL + id, {
+    fetch(import.meta.env.VITE_SERVER_URL + id, {
       method: "DELETE",
     }).then(() => {
       history.push("/");
