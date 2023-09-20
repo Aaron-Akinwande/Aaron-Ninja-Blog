@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "css": "tailwindcss build -i src/index.css -o src/App.css -w",
-    "preinstall" : "npx npm-force-resolutions"
+    "css": "tailwindcss build -i src/index.css -o src/App.css -w"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
